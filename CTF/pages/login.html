@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Connexion Administrateur</h1>
+        <nav>
+            <a href="../index.html">Accueil</a>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="form-container">
+            <form id="loginForm">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Se connecter</button>
+            </form>
+            <p id="error-message" style="color: red;"></p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Mon Blog
+    </footer>
+
+    <script>
+        const validUsername = "admin";
+        const validPassword = "adolf";  // Mot de passe en clair
+
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Vérification du nom d'utilisateur et du mot de passe
+            if (username === validUsername && password === validPassword) {
+                window.location.href = "../pages/admin.html";  // Rediriger vers admin.html si valide
+            } else {
+                document.getElementById("error-message").textContent = "Nom d'utilisateur ou mot de passe incorrect.";
+            }
+        });
+    </script>
+</body>
+</html>
+
