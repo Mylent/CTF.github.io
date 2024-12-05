@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de Mèmes</title>
+    <style>
+        body {
+            background: url('https://media.giphy.com/media/l0HUpt2s9Pclgt9Vm/giphy.gif') repeat;
+            background-color: #eeeeee;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: #0000ff;
+            text-align: center;
+            margin: 0;
+        }
+
+        h1 {
+            color: #ff0000;
+            text-shadow: 2px 2px 0px #000;
+            font-size: 36px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .meme {
+            margin: 10px;
+            padding: 5px;
+            border: 5px solid #00ff00;
+            background-color: #ffff00;
+            width: 200px;
+            text-align: center;
+        }
+
+        .meme img {
+            max-width: 100%;
+            height: auto;
+            border: 3px dashed #ff00ff;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        a {
+            color: #ff00ff;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #00ffff;
+            text-decoration: blink;
+        }
+
+        marquee {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff00ff;
+        }
+
+        .ads {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #000;
+            padding: 15px;
+            width: 200px;
+            border-radius: 10px;
+            z-index: 10;
+        }
+
+        .left-ad {
+            left: 10px;
+        }
+
+        .right-ad {
+            right: 10px;
+        }
+
+        .ads a {
+            color: #ff00ff;
+        }
+
+        .ads a:hover {
+            color: #00ffff;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Lecture automatique de la musique -->
+    <audio autoplay loop>
+        <source src="https://www.myinstants.com/media/sounds/nyan-cat-original.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+
+    <h1>Bienvenue sur ma galerie de mèmes !</h1>
+    <marquee behavior="alternate" scrollamount="10">🔥 Les meilleurs mèmes de l'univers ! 🔥</marquee>
+    
+    <div class="container">
+        <!-- Mème 1 -->
+        <div class="meme">
+            <img src="https://images3.memedroid.com/images/UPLOADED913/670435b9de4ba.jpeg" alt="Mème 1">
+            <p>Même "Bob et le feu"</p>
+        </div>
+        <!-- Mème 2 -->
+        <div class="meme">
+            <img src="https://i.pinimg.com/736x/1b/cc/71/1bcc71296a4f016e26a02f113fd94a6e.jpg" alt="Mème 2">
+            <p>Même "Bob et le Rhume"</p>
+        </div>
+        <!-- Mème 3 -->
+        <div class="meme">
+            <img src="https://lesjoiesducode.fr/content/049/projet-maintenance-bob-eponge.jpg" alt="Mème 3">
+            <p>Même "Bob et les projets"</p>
+        </div>
+        <!-- Mème 4 -->
+        <div class="meme">
+            <img src="https://media.licdn.com/dms/image/v2/D4E10AQGoGPs09lwGzg/image-shrink_800/image-shrink_800/0/1732442435502?e=2147483647&v=beta&t=bFZQ9r-_7IIbHgWJvi2aBqHSfEWkYtUrHfvLh5LW3h0" alt="Mème 4">
+            <p>Même "Bob et les emprunts immobilier"</p>
+        </div>
+        <!-- Mème 5 -->
+        <div class="meme">
+            <img src="https://downloadwap.com/thumbs2/wallpapers/2022/p2/cartoon-anime/22/s8e18162.jpg" alt="Mème 5">
+            <p>Même "L'anchoi de Bob quand il perd le soir"</p>
+        </div>
+    </div>
+
+    <!-- Publicité côté gauche -->
+    <div class="ads left-ad">
+        <h3>Découvrez notre site !</h3>
+        <p><a href="#">Click Here for Fun</a></p>
+    </div>
+
+    <!-- Publicité côté droit -->
+    <div class="ads right-ad">
+        <h3>Félicitations !</h3>
+        <p>Vous avez gagné un <strong>iPhone 3</strong> !</p>
+        <p><a href="#">Réclamez votre prix ici</a></p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Mème Galerie - Tous droits réservés</p>
+    </div>
+</body>
+</html>
