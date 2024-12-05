@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panneau d'administration</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Panneau d'administration</h1>
+        <h1>Page Admin</h1>
         <nav>
             <a href="../index.html">Accueil</a>
-            <a href="login.html">Connexion</a>
         </nav>
     </header>
     <div class="content">
-        <p>Vous êtes connecté en tant qu'administrateur.</p>
+        <p>Bienvenue, administrateur !</p>
+        <button id="revealLevel2">Afficher le Niveau 2</button>
+        <div id="level2Link" style="display: none;">
+            <a href="../pages/level2.html">Accéder au Niveau 2</a>
+        </div>
     </div>
-    <footer class="footer">
+    <footer>
         &copy; 2024 Mon Blog
     </footer>
+
+    <script>
+        document.getElementById("revealLevel2").addEventListener("click", function () {
+            console.log("Bravo pour avoir trouvé ce bouton !");
+            document.getElementById("level2Link").style.display = "block";
+        });
+    </script>
 </body>
 </html>
+

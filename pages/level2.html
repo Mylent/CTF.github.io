@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niveau 2</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Niveau 2 : Entrez le mot de passe</h1>
+        <nav>
+            <a href="../index.html">Accueil</a>
+        </nav>
+    </header>
+    <div class="content">
+        <p>Félicitations pour avoir atteint le niveau 2 ! Trouvez le mot de passe caché pour continuer.</p>
+        <form id="passwordForm">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Valider</button>
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+    <footer>
+        &copy; 1998 Mon Blog
+    </footer>
+
+    <script>
+        // Vérification du mot de passe (le mot de passe réel n'est pas directement visible)
+        document.getElementById("passwordForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Empêche le rechargement de la page.
+    
+            const password = document.getElementById("password").value;
+    
+            // Validation indirecte du mot de passe
+            if (isValidPassword(password)) {
+                alert("Félicitations ! Vous avez trouvé le bon mot de passe.");
+                window.location.href = "../pages/level3.html"; // Redirection vers le niveau suivant.
+            } else {
+                document.getElementById("error-message").textContent = "Mot de passe incorrect. Essayez encore.";
+            }
+        });
+    
+        // Fonction de validation : encode le mot de passe attendu
+        function isValidPassword(input) {
+            const expected = String.fromCharCode(97, 100, 109, 105, 110, 49, 57, 57, 56); 
+            return input === expected;
+        }
+    
+        // Indices pour l'utilisateur
+        console.log("Félicitations d'avoir atteint le niveau 2 !");
+        console.log("Indice : Le mot de passe est une combinaison du premier username et de l'année.");
+    </script>
+    
+</body>
+</html>

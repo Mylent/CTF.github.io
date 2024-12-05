@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niveau 3</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Niveau 3 : Entrez le mot de passe</h1>
+        <nav>
+            <a href="../index.html">Accueil</a>
+        </nav>
+    </header>
+    <div class="content">
+        <p>Félicitations pour avoir atteint le niveau 3 ! Trouvez le mot de passe caché pour continuer.</p>
+        <form id="passwordForm">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Valider</button>
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+    <footer>
+        &copy; 1998 Mon Blog
+    </footer>
+
+    <script>
+        function decodeBase64(encoded) {
+            return atob(encoded);
+        }
+
+        const encodedPassword = "Y2Zpbmk="; 
+
+        document.getElementById("passwordForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Empêche le rechargement de la page.
+
+            const password = document.getElementById("password").value;
+            const decodedPassword = decodeBase64(encodedPassword);
+
+            // Validation indirecte du mot de passe
+            if (password === decodedPassword) {
+                alert("Félicitations ! Vous avez trouvé le bon mot de passe.");
+                window.location.href = "../pages/level4.html"; // Redirection vers le niveau suivant.
+            } else {
+                document.getElementById("error-message").textContent = "Mot de passe incorrect. Essayez encore.";
+            }
+        });
+
+        // Indices pour l'utilisateur
+        console.log("Félicitations d'avoir atteint le niveau 3 !");
+    </script>
+</body>
+</html>
